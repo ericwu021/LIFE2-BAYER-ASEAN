@@ -3,6 +3,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag } from '@angul
 import { MatDialog,MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Input } from '@angular/core';
 import { Time_backend,Rank_backend } from '../backend-communication';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -21,8 +22,8 @@ export class CoreEnComponent implements OnInit {
 
     headers = ["RANK","CWID","SECONDS"]
 
-    backend_rank_url : string = "http://life2-international-backend.azurewebsites.net/rank";
-    backend_url : string = "http://life2-international-backend.azurewebsites.net/get-time";
+    backend_rank_url : string = "https://life2-international-backend.azurewebsites.net/rank";
+    backend_url : string = "https://life2-international-backend.azurewebsites.net/get-time";
 
     id_1_list = ["🥢 为赢而战", "🥢 Play to win"];
     id_2_list = ["🥢 愿景引领", "🥢 Lead with purpose"];
